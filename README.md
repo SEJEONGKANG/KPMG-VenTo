@@ -67,11 +67,11 @@
    ```
 3. Terminal
    ```
-   # KPMG-VenTo/FE
+   # KPMG-VenTo/frontend
    $ npm install
    $ npm run dev
 
-   # KPMG-VenTo/BE/api
+   # KPMG-VenTo/backend
    $ flask run
    ```
 
