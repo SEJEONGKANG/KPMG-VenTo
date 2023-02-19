@@ -60,12 +60,7 @@
 
 1. `git clone https://github.com/SEJEONGKANG/KPMG-VenTo.git`
 
-2. Environment Settings
-   ```bash
-   # python==3.9
-   $ cat requirements.txt | xargs -n 1 pip install
-   ```
-3. Terminal
+2. Terminal
    ```
    # KPMG-VenTo/frontend
    $ npm install
@@ -75,6 +70,6 @@
    $ flask run
    ```
 
-4. Run on Local Server: http://localhost:3000
+3. Run on Local Server: http://localhost:3000
 
 
