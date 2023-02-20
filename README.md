@@ -53,7 +53,7 @@
 |--------|--------|
 |R&D Together|[rroyc20/RnD-base-tokenizer-mDeBERTa-v3-kor-further](https://huggingface.co/rroyc20/RnD-base-tokenizer-mDeBERTa-v3-kor-further) / [jhgan/ko-sbert-sts](https://huggingface.co/jhgan/ko-sbert-sts)|
 |Contract Together|[jhn9803/Contract-base-tokenizer-mDeBERTa-v3-kor-further](https://huggingface.co/jhn9803/Contract-base-tokenizer-mDeBERTa-v3-kor-further) / [jhn9803/Contract-new-tokenizer-mDeBERTa-v3-kor-further](https://huggingface.co/jhn9803/Contract-new-tokenizer-mDeBERTa-v3-kor-further)|
-|R&D Together|[sentence-transformers/all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) / [facebook/bart-large-mnli](https://huggingface.co/facebook/bart-large-mnli)|
+|Issue Together|[sentence-transformers/all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) / [facebook/bart-large-mnli](https://huggingface.co/facebook/bart-large-mnli)|
 
 ---
 ## How to Run
