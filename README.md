@@ -65,7 +65,7 @@
    ```
    # ~/KPMG-VenTo/frontend
    $ npm install
-   $ npm run dev
+   $ npm run dev --legacy-peer-deps
 
    # for MacOS user
    # ~/KPMG-VenTo/backend
