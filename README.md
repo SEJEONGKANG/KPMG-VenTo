@@ -64,23 +64,30 @@
    
    ```
    # ~/KPMG-VenTo/frontend
-   $ npm install
-   $ npm run dev --legacy-peer-deps
+   $ npm install --legacy-peer-deps
+   $ npm run dev
+   ```
 
-   # for MacOS user
+   for MacOS user
+   ```
    # ~/KPMG-VenTo/backend
    $ python -m venv venv
    $ source venv/bin/activate
    $ pip install -r requirements.txt
    $ flask run
-
-   # for Windows user
+   ```
+   
+   for Windows user
+   ```
    # ~/KPMG-VenTo/backend
    $ python -m venv venv
    $ .\venv\Scripts\activate
    $ pip install -r requirements.txt
    $ flask run
    ```
+
+3. add similar into KPMG-VenTo\backend\torchs
+   download link: https://drive.google.com/drive/folders/1MxQ3VUFcI5JuCzuMnlhE3Suz_g19weu4?usp=share_link
 
 4. Run on Local Server: http://localhost:3000
 
