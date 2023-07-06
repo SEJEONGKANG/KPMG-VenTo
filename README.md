@@ -61,15 +61,35 @@
 1. `git clone https://github.com/SEJEONGKANG/KPMG-VenTo.git`
 
 2. Terminal
+   
    ```
-   # KPMG-VenTo/frontend
-   $ npm install
+   # ~/KPMG-VenTo/frontend
+   $ npm install --legacy-peer-deps
    $ npm run dev
+   ```
 
-   # KPMG-VenTo/backend
+   for MacOS user
+   ```
+   # ~/KPMG-VenTo/backend
+   $ python -m venv venv
+   $ source venv/bin/activate
+   $ pip install -r requirements.txt
+   $ flask run
+   ```
+   
+   for Windows user
+   ```
+   # ~/KPMG-VenTo/backend
+   $ python -m venv venv
+   $ .\venv\Scripts\activate
+   $ pip install -r requirements.txt
    $ flask run
    ```
 
-3. Run on Local Server: http://localhost:3000
+3. add similar into KPMG-VenTo\backend\torchs
+
+   [download link](https://drive.google.com/drive/folders/1518Vy7GTzgbM64BTmWpdYPhAu_B0uumZ?usp=sharing)
+
+4. Run on Local Server: http://localhost:3000
 
 
