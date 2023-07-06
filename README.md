@@ -67,6 +67,8 @@
    $ npm run dev
 
    # KPMG-VenTo/backend
+   $ python -m venv venv
+   $ pip install -r requirements.txt
    $ flask run
    ```
 
