@@ -1,7 +1,5 @@
-import time
 from flask_cors import CORS
 from flask import Flask, jsonify, make_response, request
-import flask
 from service_models.RD import RD
 from service_models.Contract import Contract_Model, Contract_Model_Attention
 import json
@@ -108,10 +106,20 @@ def issue():
     
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT cluster_number FROM auth WHERE company_name=?", (company_name,))
-    cluster_num = cursor.fetchone()[0]
+    try:
+        cursor.execute("SELECT industry_name FROM auth_final WHERE company_name=?", (company_name,))
+        industry_name = cursor.fetchone()[0]
+    except:
+        if '㈜' in company_name:
+            company_name.replace('㈜', '')
+        
+        cursor.execute("SELECT industry_name FROM auth_final WHERE company_name=?", ('㈜'+company_name,))
+        industry_name = cursor.fetchone()[0]
     
-    reco_res = pd.read_sql(f'SELECT source, title, url, urlToImage from news4company where {cluster_num} = cluster1 or {cluster_num} = cluster2 or {cluster_num} = cluster3', conn, index_col=None)
+    if ' ' in industry_name:
+        reco_res = pd.read_sql(f'SELECT source, title, url, urlToImage from news4company where "{industry_name}" = first_label or "{industry_name}" = second_label or "{industry_name}" = third_label', conn, index_col=None)
+    else:
+        reco_res = pd.read_sql(f'SELECT source, title, url, urlToImage from news4company where {industry_name} = first_label or {industry_name} = second_label or {industry_name} = third_label', conn, index_col=None)
     
     cols = list(reco_res.columns)
     
@@ -120,7 +128,6 @@ def issue():
         result_dict[f'news{i}'] = dict()
         for j in range(len(list(content))):
             result_dict[f'news{i}'][cols[j]] = list(content)[j]
-    
     
     result = json.dumps(result_dict, ensure_ascii=False)
     res = make_response(result)

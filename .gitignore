@@ -1,0 +1,6 @@
+# python backend virtual environment
+/venv
+
+# npm
+/npm_requirements.txt
+
